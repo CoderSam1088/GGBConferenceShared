@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+    <title>GeoGebra App Embedded in a webpage</title>
+    <meta name=viewport content="width=device-width,inital-scale=1">
+    <meta charset="utf-8" />
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <style>
+        button {
+            background-color: darkblue;
+            border: none;
+            color: white;
+            text-align: center;
+            padding: 15px 32px;
+            border-radius: 12px;
+        }
+        button:hover {
+            background-color: blue;
+        }
+
+        button:active {
+            transform: translateY(4px);
+        }
+    </style>
+
+
+
+</head>
+<body>
+
+
+    
+    
+        <div align="center">
+            <h2>GeoGebra App Embedded in a webpage</h2>
+        <div id="interactive_figure1"></div>
+        <p></p>
+        <div>
+        <button onclick="appletShape.setValue('sides', 3);">Triangle</button>
+        <button onclick="appletShape.setValue('sides', 4);">Quadrilateral</button>
+        <button onclick="appletShape.setValue('sides', 5);">Pentagon</button>
+        <button onclick="appletShape.setValue('sides', 6);">Hexagon</button>
+        </div>
+        </div>
+
+
+            <script type="text/javascript">
+                 var parameters1 = {
+                            "id": "appletShape",
+                            "width":800,
+                            "height":500,
+                            "filename": "/GGBConference/assets/buttonApp.ggb"
+                           };
+                var applet1 = new GGBApplet(parameters1, true);
+                       
+                    window.onload = function() { 
+                        //var applet1 = new GGBApplet(parameters1, true);
+                        applet1.inject(interactive_figure1);
+                        }
+            </script>
+    
+    </body>
+    </html>
