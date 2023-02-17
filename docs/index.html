@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <title>GeoGebra App Embedded in a webpage</title>
+    <title>GeoGebra App Embed Template</title>
     <meta name=viewport content="width=device-width,inital-scale=1">
     <meta charset="utf-8" />
     <script src="https://www.geogebra.org/apps/deployggb.js"></script>
@@ -29,26 +29,20 @@
 
 
     
-    
+    <!-- THe GeoGebra applet gets injected into here-->
         <div align="center">
             <h2>GeoGebra App Embedded in a webpage</h2>
         <div id="interactive_figure1"></div>
         <p></p>
-        <div>
-        <button onclick="appletShape.setValue('sides', 3);">Triangle</button>
-        <button onclick="appletShape.setValue('sides', 4);">Quadrilateral</button>
-        <button onclick="appletShape.setValue('sides', 5);">Pentagon</button>
-        <button onclick="appletShape.setValue('sides', 6);">Hexagon</button>
-        </div>
         </div>
 
 
             <script type="text/javascript">
                  var parameters1 = {
-                            "id": "appletShape",
+                            "id": "",
                             "width":800,
                             "height":500,
-                            "filename": "/GGBConference/assets/buttonApp.ggb"
+                            "filename": ""
                            };
                 var applet1 = new GGBApplet(parameters1, true);
                        
